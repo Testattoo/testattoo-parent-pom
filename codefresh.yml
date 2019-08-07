@@ -7,6 +7,7 @@ steps:
     stage: build
     type: git-clone
     repo: Testattoo/testattoo-pom
+    revision: '${{CF_REVISION}}'
     git: github
   main_build:
     title: Building pom
