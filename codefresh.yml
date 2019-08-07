@@ -1,0 +1,16 @@
+version: "1.0"
+stages:
+  - "build"
+steps:
+  main_clone:
+    title: Cloning repository...
+    stage: build
+    type: git-clone
+    repo: Testattoo/testattoo-pom
+    git: github
+  main_build:
+    title: Building pom
+    stage: build
+    image: openjdk:8-alpine
+    commands:
+      - ./mvnw clean package
