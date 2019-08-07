@@ -5,8 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.testattoo</groupId>
-  <artifactId>testattoo</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <artifactId>testattoo-pom</artifactId>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Testattoo</name>
@@ -15,7 +15,7 @@
     <name>Ovea</name>
   </organization>
 
-  <url>http://www.testatoo.org</url>
+  <url>http://www.testattoo.org</url>
 
   <scm>
     <connection>scm:git:git@github.com:Testattoo/testattoo-pom.git</connection>
@@ -30,6 +30,8 @@
     <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 
     <groovy.version>2.5.6</groovy.version>
+    <classgraph.version>3.1.15</classgraph.version>
+    <guava.version>27.1-jre</guava.version>
 
     <!-- Tests -->
     <junit.jupiter.version>5.4.0</junit.jupiter.version>
@@ -169,6 +171,16 @@
         <version>${hamcrest.version}</version>
       </dependency>
       <dependency>
+        <groupId>io.github.classgraph</groupId>
+        <artifactId>classgraph</artifactId>
+        <version>${classgraph.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
         <version>${junit.jupiter.version}</version>
@@ -237,18 +249,6 @@
               <keyname>F82FA7FE</keyname>
               <passphrase>${ovea_gpg_passphrase}</passphrase>
             </configuration>
-          </plugin>
-          <plugin>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
           </plugin>
           <plugin>
             <groupId>org.codehaus.mojo</groupId>

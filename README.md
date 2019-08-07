@@ -1,2 +1,2 @@
-# testattoo-parent-pom
-Testattoo parent POM
+# testattoo pom
+Testattoo POM
