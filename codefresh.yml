@@ -6,8 +6,8 @@ steps:
     title: Cloning repository...
     stage: build
     type: git-clone
-    repo: Testattoo/testattoo-pom
-    revision: '${{CF_REVISION}}'
+    repo: '${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}'
+      revision: '${{CF_REVISION}}'
     git: github
   main_build:
     title: Building pom
