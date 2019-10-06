@@ -152,7 +152,6 @@
             <include>org/testattoo/**</include>
           </includes>
           <excludes>
-            <exclude>*.adoc</exclude>
             <exclude>*Test*</exclude>
             <exclude>*test*</exclude>
           </excludes>
@@ -176,6 +175,8 @@
             <email>altus34@gmail.com</email>
           </properties>
           <excludes>
+            <exclude>.editorconfig</exclude>
+            <exclude>*.adoc</exclude>
             <exclude>**/README</exclude>
             <exclude>mvnw</exclude>
             <exclude>mvnw.*</exclude>
