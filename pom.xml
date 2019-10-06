@@ -152,6 +152,7 @@
             <include>org/testattoo/**</include>
           </includes>
           <excludes>
+            <exclude>*.adoc</exclude>
             <exclude>*Test*</exclude>
             <exclude>*test*</exclude>
           </excludes>
